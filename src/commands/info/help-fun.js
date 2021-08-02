@@ -25,6 +25,10 @@ module.exports = {
         `${prefix}math`,
         "Give the bot a math question! And it will give you a good response"
       )
+      .addField(
+        `${prefix}chat <reply>`,
+        "Chay with Joyy if you have a bad day!"
+      )
       .addField(`${prefix}djs <query>`, "Get docs from https://discord.js.org")
       .setColor(maincolor);
 
