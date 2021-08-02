@@ -24,6 +24,9 @@
   <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="https://www.plexicz.com/joy.png" height="28" />
+        </a>
         <a
           role="button"
           class="navbar-burger"
@@ -39,13 +42,9 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item"><i class="fas fa-home"></i> Home </a>
-          <a href="/commands" class="navbar-item"
-            ><i class="fas fa-robot"></i> Commands</a
-          >
-          <a href="/dashboard" class="navbar-item"
-            ><i class="fas fa-database"></i> Dashboard
-          </a>
+          <a class="navbar-item"> Home </a>
+          <a href="/commands" class="navbar-item"> Commands</a>
+          <a href="/dashboard" class="navbar-item"> Dashboard </a>
 
           <div class="navbar-item has-dropdown is-hoverable"></div>
         </div>
@@ -53,8 +52,14 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
+              <a
+                href="https://discord.com/oauth2/authorize?client_id=871680404116094976&permissions=8&scope=bot"
+                class="button is-warning is-focused"
+              >
+                <strong><i class="fas fa-plus"></i> Invite Me</strong>
+              </a>
               <a href="/auth">
-                <button class="button is-link">
+                <button class="button is-info">
                   <span class="icon is-small">
                     <i class="fab fa-discord"></i>
                   </span>
