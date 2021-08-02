@@ -1,5 +1,6 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
-const { maincolor, mainemoji, prefix } = require("../../config.json");
+const { maincolor, mainemoji } = require("../../config.json");
+
 module.exports = {
   name: "help",
   cooldown: 5000,
@@ -18,6 +19,7 @@ module.exports = {
       .addField(`${mainemoji} Fun Commands`, "```j!help-fun```", true)
       .addField("⚙️ Config Commands", "```j!help-config```", true)
       .addField("🔒 Admin Commands", "```j!help-admin```", true)
+      .addField("ℹ️ Info Commands", "```j!help-info```", true)
       .setColor(maincolor)
       .setTimestamp();
 
