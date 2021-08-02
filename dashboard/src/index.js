@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 3001;
 const authRoute = require("./routes/auth");
 const indexRoute = require("./routes/index");
 const dashboardRoute = require("./routes/dashboard");
+const commandRoute = require("./routes/command");
 const session = require("express-session");
 const passport = require("passport");
 const db = require("./database/database");
@@ -37,6 +38,7 @@ app.use(passport.session());
 app.use("/auth", authRoute);
 app.use("/dashboard", dashboardRoute);
 app.use(indexRoute);
+app.use(commandRoute);
 
 // Ejs
 app.set("view engine", "ejs");

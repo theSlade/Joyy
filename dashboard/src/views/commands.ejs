@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+  <style></style>
   <head>
-    <style>
-      .is-link {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    </style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -19,19 +12,18 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/makerrz@4.0.2/dist/css/makerrz.min.css
-  "
+      href="https://cdn.jsdelivr.net/npm/makerrz@4.0.2/dist/css/makerrz.min.css"
     />
     <link rel="icon" href="https://www.plexicz.com/joy.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joyy Dashboard</title>
+    <title>Joy - Commands</title>
   </head>
   <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
-          <img src="https://www.plexicz.com/joy.png" height="60" />
+          <img src="https://www.plexicz.com/joy.png" height="28" />
         </a>
 
         <a
@@ -49,10 +41,10 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
+          <a href="/commands" class="navbar-item"> Commands </a>
+
           <a href="/" class="navbar-item"> Home </a>
 
-          <a href="/commands" class="navbar-item"> Commands </a>
-          <a href="/premium" class="navbar-item"> Premium </a>
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link"> More </a>
 
@@ -74,8 +66,8 @@
               >
                 <strong><i class="fas fa-plus"></i> Invite Me</strong>
               </a>
-              <a href="/auth/logout" class="button is-info is-focused">
-                <i class="fas fa-sign-out-alt"></i> Logout
+              <a href="/premium" class="button is-danger font-open is-focused">
+                <i class="fas fa-sign-out-alt">Go Premium</i>
               </a>
             </div>
           </div>
@@ -83,10 +75,27 @@
       </div>
     </nav>
     <main>
-      <h1 class="text-center font-open mt-10 H5">
-        <i>Welcome to the dashboard.</i>
-      </h1>
+      <h1 class="text-center font-abel mt-5 H4">Command List:</h1>
+      <h3 class="text-center font-open mt-4 main-h3">Fun commands:</h3>
+      <center class="mt-4">
+        <code>j!meme </code>
+        <code>j!math </code>
+        <code>j!djs</code>
+      </center>
+      <h3 class="text-center font-open mt-4 main-h3">Info commands:</h3>
+      <center class="mt-4">
+        <code>j!invite</code>
+      </center>
+      <h3 class="text-center font-open mt-4 main-h3">Config commands:</h3>
+      <center class="mt-4">
+        <code>j!set-muterole</code>
+      </center>
     </main>
+    <style>
+      .main-h3 {
+        font-size: 20px;
+      }
+    </style>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const $navbarBurgers = Array.prototype.slice.call(

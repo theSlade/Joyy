@@ -3,6 +3,19 @@
   <style>
     .main-h1 {
       font-size: 32px;
+      margin-top: 100px;
+    }
+
+    .joyy-img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 11%;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 1.6rem;
     }
   </style>
   <head>
@@ -19,6 +32,7 @@
       href="https://cdn.jsdelivr.net/npm/makerrz@4.0.2/dist/css/makerrz.min.css
     "
     />
+    <link rel="icon" href="https://www.plexicz.com/joy.png" />
     <title>Joyy - Home</title>
   </head>
   <body>
@@ -45,6 +59,7 @@
           <a class="navbar-item"> Home </a>
           <a href="/commands" class="navbar-item"> Commands</a>
           <a href="/dashboard" class="navbar-item"> Dashboard </a>
+          <a href="/premium" class="navbar-item"> Premium </a>
 
           <div class="navbar-item has-dropdown is-hoverable"></div>
         </div>
@@ -52,10 +67,7 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a
-                href="https://discord.com/oauth2/authorize?client_id=871680404116094976&permissions=8&scope=bot"
-                class="button is-warning is-focused"
-              >
+              <a href="/invite" class="button is-warning is-focused">
                 <strong><i class="fas fa-plus"></i> Invite Me</strong>
               </a>
               <a href="/auth">
@@ -72,7 +84,22 @@
       </div>
     </nav>
     <main>
-      <h1 class="text-center mt-5 font-open main-h1">Joyy</h1>
+      <h1 class="text-center font-open main-h1">Joyy</h1>
+      <img class="joyy-img" src="https://www.plexicz.com/joy.png" />
+      <p class="text-center mt-4 font-abel">
+        <i>An super smart bot for discord created with discord.js</i>
+      </p>
+      <br />
+      <div class="buttons is-centered">
+        <a href="/invite" class="button is-success is-focused is-centered"
+          ><i class="fas fa-plus"></i> Invite Me</a
+        >
+        <a
+          href="/auth"
+          class="button is-warning is-focused dashboard-btn is-centered"
+          ><i class="fas fa-arrow-right"></i> Go to Dashboard</a
+        >
+      </div>
     </main>
     <script>
       document.addEventListener("DOMContentLoaded", () => {

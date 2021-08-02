@@ -28,6 +28,7 @@ passport.use(
           console.log("User exists.");
           await user.updateOne({
             username: `${profile.username}#${profile.discriminator}`,
+            // email: `${profile.email}`,
             // guilds: profile.guilds,
           });
           done(null, user);
@@ -36,6 +37,7 @@ passport.use(
           const newUser = await DiscordUser.create({
             discordId: profile.id,
             username: profile.username,
+            // email: profile.email,
             guilds: profile.guilds,
           });
           const savedUser = await newUser.save();
