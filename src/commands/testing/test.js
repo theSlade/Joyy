@@ -10,7 +10,7 @@ module.exports = {
    */
   run: async (client, message, args) => {
     const embed = new MessageEmbed()
-      .setTitle("This is Joyy")
+      .setTitle("This is Joyy!")
       .setImage(
         "https://github.com/theSlade/Joyy/blob/main/src/assets/joy.png"
       );
