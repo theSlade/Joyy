@@ -1,72 +1,93 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a
-      role="button"
-      class="navbar-burger"
-      aria-label="menu"
-      aria-expanded="false"
-      data-target="navbarBasicExample"
-    >
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+<!DOCTYPE html>
+<html>
+  <style>
+    .main-h1 {
+      font-size: 32px;
+    }
+  </style>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/makerrz@4.0.2/dist/css/makerrz.min.css
+    "
+    />
+    <title>Joyy - Home</title>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item"><i class="fas fa-home"></i> Home </a>
-      <a href="/commands" class="navbar-item"
-        ><i class="fas fa-robot"></i> Commands
-      </a>
-      <a href="/dashboard" class="navbar-item"
-        ><i class="fas fa-database"></i> Dashboard
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable"></div>
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a href="/auth">
-            <button class="button is-link">
-              <span class="icon is-small">
-                <i class="fab fa-discord"></i>
-              </span>
-              <span>Login</span>
-            </button>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item"><i class="fas fa-home"></i> Home </a>
+          <a href="/commands" class="navbar-item"
+            ><i class="fas fa-robot"></i> Commands</a
+          >
+          <a href="/dashboard" class="navbar-item"
+            ><i class="fas fa-database"></i> Dashboard
           </a>
+
+          <div class="navbar-item has-dropdown is-hoverable"></div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="/auth">
+                <button class="button is-link">
+                  <span class="icon is-small">
+                    <i class="fab fa-discord"></i>
+                  </span>
+                  <span>Login</span>
+                </button>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</nav>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-/>
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
-/>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const $navbarBurgers = Array.prototype.slice.call(
-      document.querySelectorAll(".navbar-burger"),
-      0
-    );
+    </nav>
+    <main>
+      <h1 class="text-center mt-5 font-open main-h1">Joyy</h1>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        );
 
-    if ($navbarBurgers.length > 0) {
-      $navbarBurgers.forEach((el) => {
-        el.addEventListener("click", () => {
-          const target = el.dataset.target;
-          const $target = document.getElementById(target);
+        if ($navbarBurgers.length > 0) {
+          $navbarBurgers.forEach((el) => {
+            el.addEventListener("click", () => {
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
 
-          el.classList.toggle("is-active");
-          $target.classList.toggle("is-active");
-        });
+              el.classList.toggle("is-active");
+              $target.classList.toggle("is-active");
+            });
+          });
+        }
       });
-    }
-  });
-</script>
+    </script>
+  </body>
+</html>

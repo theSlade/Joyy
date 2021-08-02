@@ -1,21 +1,105 @@
-<a href="/auth/logout">
-  <button class="button is-link" type="submit">
-    <i class="fas fa-sign-out-alt"></i> Logout
-  </button>
-</a>
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bulma@0.8.1/css/bulma.min.css"
-/>
-<style>
-  .is-link {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-</style>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-/>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .is-link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/makerrz@4.0.2/dist/css/makerrz.min.css
+  "
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joyy Dashboard</title>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <img src="https://www.plexicz.com/joy.png" width="112" height="28" />
+        </a>
+
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="/" class="navbar-item"> Home </a>
+
+          <a href="/commands" class="navbar-item"> Commands </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> More </a>
+
+            <div class="navbar-dropdown">
+              <a href="/team" class="navbar-item"> Team </a>
+              <a href="/contact" class="navbar-item"> Contact </a>
+              <hr class="navbar-divider" />
+              <a href="/report" class="navbar-item"> Report an issue </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a
+                href="https://discord.com/oauth2/authorize?client_id=871680404116094976&permissions=8&scope=bot"
+                class="button is-warning is-focused"
+              >
+                <strong><i class="fas fa-plus"></i> Invite Me</strong>
+              </a>
+              <a href="/auth/logout" class="button is-info is-focused">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        );
+
+        if ($navbarBurgers.length > 0) {
+          $navbarBurgers.forEach((el) => {
+            el.addEventListener("click", () => {
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+
+              el.classList.toggle("is-active");
+              $target.classList.toggle("is-active");
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
