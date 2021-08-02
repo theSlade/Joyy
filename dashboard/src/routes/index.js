@@ -17,4 +17,11 @@ router.get("/premium", function (req, res) {
   res.render("premium");
 });
 
+router.get("/forbidden", function (req, res) {
+  res.json({
+    message: "⚠️ Something went wrong...",
+    status: 404,
+  });
+});
+
 module.exports = router;
